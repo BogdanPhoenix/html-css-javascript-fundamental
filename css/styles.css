@@ -7,15 +7,23 @@
   --color-primary-light: #faf4ea;
 }
 
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
 body {
   color: var(--color-primary-dark);
   font-family: Poppins, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -23,7 +31,15 @@ address {
   font-style: normal;
 }
 
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .header__call-order-button {
+  padding: 16px 32px;
   color: var(--color-primary-light);
   background-color: var(--color-brand-light);
   border: 2px solid var(--color-brand-light);
@@ -45,7 +61,37 @@ address {
 .nav__link:hover {
   color: var(--color-brand-light);
   text-decoration: underline;
-  font-weight: 600;
+}
+
+.header-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.traditions,
+.chef,
+.format,
+.contact {
+  padding: 48px 0;
+}
+
+.hero {
+  padding: 272px 0;
 }
 
 .hero__title {
@@ -53,10 +99,51 @@ address {
   text-align: center;
   font-size: 128px;
   font-weight: 900;
+  margin-bottom: 0;
 }
 
 .hero__title .accent {
   color: var(--color-brand-light);
+}
+
+.avantages {
+  padding: 16px 0;
+  background-color: var(--color-brand-light);
+}
+
+.avantages__hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.avantages__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.avantages__item {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-primary-light);
+}
+
+.traditions {
+  padding-top: 96px;
+}
+
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
 }
 
 .traditions__title,
@@ -69,14 +156,8 @@ address {
   line-height: 1.3;
 }
 
-.traditions__list {
-  color: var(--color-primary-light);
-  background-color: var(--color-brand-light);
-}
-
-.traditions__item {
-  font-size: 20px;
-  font-weight: 300;
+.traditions__title {
+  margin-bottom: 42px;
 }
 
 .traditions__paragraph .accent {
@@ -88,13 +169,38 @@ address {
   font-weight: 600;
 }
 
+.traditions__paragraph-limited {
+  max-width: 340px;
+}
+
+.chef__title,
+.format__title {
+  margin-bottom: 80px;
+}
+
 .chef__title .accent {
   color: var(--color-brand-dark);
 }
 
 .chef__name {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
+}
+
+.format__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.format__card {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.format__item {
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .format__subtitle {
@@ -102,9 +208,18 @@ address {
   font-weight: 600;
 }
 
-.format__article__text {
+.format__card__text {
   font-size: 14px;
   font-weight: 300;
+}
+
+.contact__title {
+  margin-bottom: 16px;
+}
+
+.contact__map {
+  width: 100%;
+  max-width: 603%;
 }
 
 .footer__contact-item,

@@ -93,14 +93,20 @@
                   alt="Дівчина, з круасаном у руці, посміхається на камеру"
                   class="chef__image"
                 />
-                <h3 class="chef__name">Настя</h3>
-                <p class="chef__description">Привіт, я Настя!</p>
-                <p class="chef__description">
-                  Вже 10 років, я втілюю у життя цікаві та смачні ідеї.
-                </p>
-                <p class="chef__description">
-                  Я випічу для вас найсмачніщі вироби!
-                </p>
+                <div>
+                  <h3 class="chef__name">Настя</h3>
+                  <div class="chef__description">
+                    <p>Привіт, я Настя!</p>
+                    <p>
+                      Вже 10 років, я втілюю <br />
+                      у життя цікаві та смачні ідеї.
+                    </p>
+                    <p>
+                      Я випічу для вас <br />
+                      найсмачніщі вироби!
+                    </p>
+                  </div>
+                </div>
               </article>
             </li>
             <li class="chef__item">
@@ -110,15 +116,18 @@
                   alt="Чоловік, в кухонному фартуху, плідно працює за столом."
                   class="chef__image"
                 />
-                <h3 class="chef__name">Влад</h3>
-                <p class="chef__description">Привіт, я Влад!</p>
-                <p class="chef__description">
-                  Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша
-                  любов, з якою ми ділимось кожен раз з Вами через нашу випічку!
-                </p>
-                <p class="chef__description">
-                  Я зроблю для вас унікальну начинку на будь який смак!
-                </p>
+                <div>
+                  <h3 class="chef__name">Влад</h3>
+                  <div class="chef__description">
+                    <p>Привіт, я Влад!</p>
+                    <p>
+                      Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша
+                      любов, з якою ми ділимось кожен раз з Вами через нашу
+                      випічку!
+                    </p>
+                    <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
+                  </div>
+                </div>
               </article>
             </li>
           </ul>
@@ -127,116 +136,151 @@
       <section id="format-section" class="format">
         <div class="container">
           <h2 class="format__title">Формати</h2>
-          <ul class="format__list">
-            <li class="format__item">
-              <article class="format__card">
-                <h3 lang="en" class="format__subtitle">Walrus</h3>
-                <div class="format__card__text">
-                  <p>Площа: до 120 м2</p>
-                  <p>Меню: розширене меню</p>
-                  <p>
-                    Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
-                    офіціанти-різнороби
-                  </p>
-                  <p>Посадкові місця: є</p>
-                </div>
-              </article>
-            </li>
-            <li class="format__item">
-              <article class="format__card">
-                <h3 lang="en" class="format__subtitle">Horseshoe</h3>
-                <div class="format__card__text">
-                  <p>Площа: до 25 м2</p>
-                  <p>Меню: найпопулярніші позиції меню</p>
-                  <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
-                  <p>Посадкові місця: відсутні</p>
-                </div>
-              </article>
-            </li>
-            <li class="format__item">
-              <article class="format__card">
-                <h3 lang="en" class="format__subtitle">Handlebar</h3>
-                <div class="format__card__text">
-                  <p>Площа: до 15 м2</p>
-                  <p>Меню: найпопулярніші позиції меню</p>
-                  <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-                  <p>Посадкові місця: відсутні</p>
-                </div>
-              </article>
-            </li>
-          </ul>
+          <div class="formats-container">
+            <button class="carousel-button" type="button">
+              <svg class="formats-arrow">
+                <use href="img/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <ul class="format__list">
+              <li class="format__item">
+                <article class="format__card">
+                  <h3 lang="en" class="format__subtitle">Walrus</h3>
+                  <div class="format__card__text">
+                    <p>Площа: до 120 м2</p>
+                    <p>Меню: розширене меню</p>
+                    <p>
+                      Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
+                      офіціанти-різнороби
+                    </p>
+                    <p>Посадкові місця: є</p>
+                  </div>
+                </article>
+              </li>
+              <li class="format__item">
+                <article class="format__card">
+                  <h3 lang="en" class="format__subtitle">Horseshoe</h3>
+                  <div class="format__card__text">
+                    <p>Площа: до 25 м2</p>
+                    <p>Меню: найпопулярніші позиції меню</p>
+                    <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
+                    <p>Посадкові місця: відсутні</p>
+                  </div>
+                </article>
+              </li>
+              <li class="format__item">
+                <article class="format__card">
+                  <h3 lang="en" class="format__subtitle">Handlebar</h3>
+                  <div class="format__card__text">
+                    <p>Площа: до 15 м2</p>
+                    <p>Меню: найпопулярніші позиції меню</p>
+                    <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                    <p>Посадкові місця: відсутні</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button" type="button">
+              <svg class="formats-arrow">
+                <use href="img/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section id="contact-section" class="contact">
         <div class="container">
-          <h2 class="contact__title">Приєднуйтеся до мережі пекарень</h2>
-          <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1640531314047!2d30.491233500000003!3d50.4566697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1712070674916!5m2!1suk!2sua"
-            width="603"
-            height="595"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="contact__map"
-          ></iframe>
+          <div class="contact-container">
+            <div class="contact-form">
+              <h2 class="contact__title">Приєднуйтеся до мережі пекарень</h2>
+              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1640531314047!2d30.491233500000003!3d50.4566697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1712070674916!5m2!1suk!2sua"
+              width="603"
+              height="595"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="contact__map"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-        <nav class="footer__nav nav">
-          <a href="/" class="nav__logo">
-            <img src="img/logo.svg" alt="Логотип сучасної пекарні" />
-          </a>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#traditions-section" class="nav__link">Наші традиції</a>
-            </li>
-            <li class="nav__item">
-              <a href="#chef-section" class="nav__link">Шеф-кухарі</a>
-            </li>
-            <li class="nav__item">
-              <a href="#format-section" class="nav__link">Формати</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact-section" class="nav__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="footer__address">
-          <ul class="footer__contact-list">
-            <li class="footer__contact-item">
-              <a href="tel:+380960000007" class="footer__contact-link"
-                >+ 38 (096) 000 00 07</a
-              >
-            </li>
-            <li class="footer__contact-item">
-              <a href="mailto:shopbakery@gmail.com" class="footer__contact-link"
-                >shopbakery@gmail.com</a
-              >
-            </li>
-            <li class="footer__contact-item">
-              <a
-                href="https://maps.app.goo.gl/SvD66bGZupn16T4t5"
-                target="_blank"
-                class="footer__contact-link"
-              >
-                Україна, м. Київ, вул. Січових Стрільців 54
+        <div class="footer-container">
+          <nav class="footer__nav nav">
+            <div class="nav__logo">
+              <a href="#">
+                <img src="img/logo.svg" alt="Логотип сучасної пекарні" />
               </a>
-            </li>
-            <li class="footer__contact-item">
-              <a href="#" class="footer__social-link"><!--Facebook icon--></a>
-            </li>
-            <li class="footer__contact-item">
-              <a href="#" class="footer__social-link"><!--Instagram icon--></a>
-            </li>
-          </ul>
-          <a href="#" target="_blank" class="footer__privacy-policy-link"
-            >Політика конфіденційності</a
-          >
-          <p class="footer__copyright">&copy; 2024 Дані захищені</p>
-        </address>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#traditions-section" class="nav__link"
+                  >Наші традиції</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#chef-section" class="nav__link">Шеф-кухарі</a>
+              </li>
+              <li class="nav__item">
+                <a href="#format-section" class="nav__link">Формати</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact-section" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer__address">
+            <ul class="footer__contact-list">
+              <li class="footer__contact-item">
+                <a href="tel:+380960000007" class="footer__contact-link"
+                  >+ 38 (096) 000 00 07</a
+                >
+              </li>
+              <li class="footer__contact-item">
+                <a
+                  href="mailto:shopbakery@gmail.com"
+                  class="footer__contact-link"
+                  >shopbakery@gmail.com</a
+                >
+              </li>
+              <li class="footer__contact-item">
+                <a
+                  href="https://maps.app.goo.gl/SvD66bGZupn16T4t5"
+                  target="_blank"
+                  class="footer__contact-link"
+                >
+                  Україна, м. Київ, вул. Січових Стрільців 54
+                </a>
+              </li>
+              <li class="footer__contact-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="icon">
+                    <use href="img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__contact-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="icon">
+                    <use href="img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="address-info">
+              <a href="#" target="_blank" class="footer__privacy-policy-link"
+                >Політика конфіденційності</a
+              >
+              <p class="footer__copyright">&copy; 2024 Дані захищені</p>
+            </div>
+          </address>
+        </div>
       </div>
     </footer>
   </body>

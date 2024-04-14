@@ -9,7 +9,9 @@
   --color-secondary-dark: #a28268;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin-top: 0;
 }
@@ -34,6 +36,10 @@ address {
   font-style: normal;
 }
 
+a {
+  display: inline-block;
+}
+
 .container {
   width: 100%;
   max-width: 1288px;
@@ -49,21 +55,21 @@ address {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-}
 
-.header__call-order-button:hover {
-  color: var(--color-brand-dark);
-  background-color: transparent;
+  &:hover {
+    color: var(--color-brand-dark);
+    background-color: transparent;
+  }
 }
 
 .nav__link {
   color: var(--color-primary-light);
   text-decoration: none;
-}
 
-.nav__link:hover {
-  color: var(--color-brand-normal);
-  text-decoration: underline;
+  &:hover {
+    color: var(--color-brand-normal);
+    text-decoration: underline;
+  }
 }
 
 .header-flex-container {
@@ -77,19 +83,18 @@ address {
   align-items: center;
   flex-grow: 1;
   gap: 40px;
-}
 
-.nav__list {
-  display: flex;
-  gap: 64px;
-  flex-grow: 1;
-  justify-content: center;
+  .nav__list {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+  }
 }
 
 .traditions,
 .chef,
-.format,
-.contact {
+.format {
   padding: 48px 0;
 }
 
@@ -107,10 +112,10 @@ address {
   font-size: 128px;
   font-weight: 900;
   margin-bottom: 0;
-}
 
-.hero__title .accent {
-  color: var(--color-brand-normal);
+  .accent {
+    color: var(--color-brand-normal);
+  }
 }
 
 .avantages {
@@ -167,13 +172,14 @@ address {
   margin-bottom: 42px;
 }
 
-.traditions__paragraph .accent {
-  color: var(--color-brand-normal);
-}
-
-.traditions__paragraph .brand {
-  text-transform: uppercase;
-  font-weight: 600;
+.traditions__paragraph {
+  .accent {
+    color: var(--color-brand-normal);
+  }
+  .brand {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 }
 
 .traditions__paragraph-limited {
@@ -188,18 +194,33 @@ address {
 .chef__title {
   max-width: 520px;
   margin: 0 auto 80px;
+
+  &::before,
+  &::after {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+  }
+
+  .accent {
+    color: var(--color-brand-dark);
+  }
 }
 
-.chef__title::before,
-.chef__title::after {
-  display: block;
-  width: 352px;
-  border: 2px solid var(--color-brand-light);
-  content: '';
-}
+.chef__list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
 
-.chef__title .accent {
-  color: var(--color-brand-dark);
+  .chef__item {
+    flex-basis: calc((100% - 30px) / 2);
+
+    .chef__article {
+      display: flex;
+      gap: 30px;
+    }
+  }
 }
 
 .chef__image {
@@ -214,8 +235,49 @@ address {
   font-weight: 600;
 }
 
+.chef__description p {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .format__title {
   margin-bottom: 80px;
+}
+
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: 1px solid var(--color-primary-dark);
+
+  .formats-arrow {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-primary-dark);
+  }
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    .formats-arrow {
+      fill: var(--color-primary-light);
+    }
+  }
 }
 
 .format__list {
@@ -254,9 +316,22 @@ address {
   margin-bottom: 16px;
 }
 
-.contact__map {
-  width: 100%;
-  max-width: 603%;
+.contact {
+  padding: 96px 0;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+
+  .contact-form {
+  }
+
+  .contact__map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+  }
 }
 
 .footer {
@@ -265,6 +340,32 @@ address {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 32px 0;
+
+  .footer-container {
+    display: flex;
+    gap: 20px;
+
+    & > * {
+      flex-basis: 50%;
+      display: flex;
+      gap: 20px;
+
+      & > * {
+        flex-basis: 50%;
+      }
+    }
+
+    /*.footer__nav {
+      .nav__logo {
+      }
+    }
+
+    .footer__address {
+      .address_info {
+      }
+    }*/
+  }
 }
 
 .footer__contact-item,
@@ -282,4 +383,12 @@ address {
 
 .footer__copyright {
   font-style: 14px;
+}
+
+.footer__social-link {
+  .icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-primary-light);
+  }
 }

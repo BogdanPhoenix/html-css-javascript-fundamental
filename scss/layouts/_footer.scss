@@ -1,0 +1,83 @@
+.footer {
+    position: relative;
+    background-image: url('../img/footer-background.png');
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0;
+  
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      background-repeat: no-repeat;
+      content: '';
+    }
+  
+    &::before {
+      left: 0;
+      background-image: url('../img/decore-bread-small.png');
+      width: 180px;
+      height: 120px;
+    }
+  
+    &::after {
+      right: 0;
+      background-image: url('../img/decore-bread-large.png');
+      width: 380px;
+      height: 190px;
+    }
+  
+    .footer-container {
+      display: flex;
+      gap: 20px;
+  
+      & > * {
+        flex-basis: 50%;
+        display: flex;
+        gap: 20px;
+  
+        & > * {
+          flex-basis: 50%;
+        }
+      }
+  
+      .footer__address {
+        .footer__contact-item .footer__contact-link,
+        .address-info .footer__privacy-policy-link {
+          color: var(--color-primary-light);
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: none;
+  
+          &:hover {
+            color: var(--color-brand-normal);
+            text-decoration: underline;
+          }
+        }
+  
+        .footer__contact-list {
+          .footer__contact-item {
+            .footer__social-link {
+              .icon {
+                width: 32px;
+                height: 32px;
+                fill: var(--color-primary-light);
+  
+                &:hover {
+                  fill: var(--color-brand-normal);
+                }
+              }
+            }
+          }
+        }
+  
+        .address-info {
+          .footer__copyright {
+            font-style: 14px;
+          }
+        }
+      }
+    }
+  }

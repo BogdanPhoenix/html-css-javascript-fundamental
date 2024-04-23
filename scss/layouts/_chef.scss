@@ -1,6 +1,4 @@
 .chef {
-  padding: 48px 0;
-
   .chef__title {
     position: relative;
     margin: 0 auto 80px;
@@ -22,10 +20,6 @@
     &::after {
       right: -0;
     }
-
-    .accent {
-      color: var(--color-brand-dark);
-    }
   }
 
   .chef__list {
@@ -35,33 +29,6 @@
 
     .chef__item {
       flex-basis: calc((100% - 30px) / 2);
-
-      .chef__article {
-        display: flex;
-        gap: 30px;
-
-        .chef__image {
-          border-radius: 4px 4px 4px 200px;
-          box-shadow: -16px 16px 0 0 var(--color-primary-light),
-            -16px 16px 0 2px var(--color-secondary-dark);
-        }
-
-        .chef-info {
-          .chef__name {
-            margin-bottom: 16px;
-            font-size: 40px;
-            font-weight: 600;
-          }
-
-          .chef__description p {
-            margin-bottom: 24px;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
     }
   }
 }

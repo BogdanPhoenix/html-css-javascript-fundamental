@@ -1,20 +1,29 @@
 .contact {
-    padding: 96px 0;
-  
-    .contact-container {
-      display: flex;
-      gap: 32px;
-  
-      .contact-form {
-        .contact__title {
-          margin-bottom: 16px;
-        }
+  padding: 96px 0;
+
+  .contact__container {
+    display: flex;
+    gap: 32px;
+
+    .contact__form {
+      .contact__title {
+        margin-bottom: 16px;
       }
-  
-      .contact__map {
-        flex-shrink: 0;
-        border: none;
-        border-radius: 16px;
+
+      .contact_form-field {
+        margin-bottom: 24px;
+      }
+
+      .contact__call-order-button {
+        margin: 0 auto 16px;
+        display: block;
       }
     }
+
+    .contact__map {
+      flex-shrink: 0;
+      border: none;
+      border-radius: 16px;
+    }
   }
+}
